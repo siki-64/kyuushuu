@@ -9,7 +9,7 @@ A Chrome extension (Manifest V3, no build step) for passive Japanese vocabulary 
 ## Settings (popup)
 - **On/off** toggle, plus **Disable on this site**.
 - **JLPT levels**: N5–N1 (default N5).
-- **Density**: chance (%) that each matching word is replaced. **Max words per page** caps the total.
+- **Words replaced (%)**: share of matching English words that get swapped (1–100%). **Max words per page** caps the total.
 - **Script mix**: relative weights for showing a word as **kanji**, **kana** or **romaji**. Each replaced word picks a script at random using these weights (default 60 / 30 / 10).
 
 The options page lists every word with its exposure count and lets you toggle **known**, edit the site blocklist and reset progress.
