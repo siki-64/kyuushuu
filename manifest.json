@@ -1,6 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Nihongo Drift",
+  "name": "Kyuushuu 吸収 – Passive Japanese Absorption",
+  "short_name": "Kyuushuu",
   "version": "0.1.0",
   "description": "Passive Japanese vocabulary immersion: swaps a few English words on the pages you read for their Japanese equivalents.",
   "permissions": ["storage"],

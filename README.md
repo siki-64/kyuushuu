@@ -1,4 +1,4 @@
-# Nihongo Drift
+# Kyuushuu 吸収: Passive Japanese Absorption
 
 A Chrome extension (Manifest V3, no build step) for passive Japanese vocabulary immersion. As you browse, it swaps a small share of English words on the page for their Japanese equivalent. Hover a swapped word to see its kanji, kana, romaji, original English and JLPT level, or mark it **Known** so it stops appearing.
 
