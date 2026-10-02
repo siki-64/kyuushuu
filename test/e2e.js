@@ -15,7 +15,7 @@ const path = require("path");
   await page.goto(url);
   await page.waitForSelector(".jpimm-word", { timeout: 5000 });
   await page.evaluate(() => { document.getElementById("dyn").textContent = "The cat drinks milk."; });
-  await page.waitForTimeout(1500);
+  await page.waitForSelector("#dyn .jpimm-word", { timeout: 5000 }).catch(() => {});
   const r = await page.evaluate(() => ({
     count: document.querySelectorAll(".jpimm-word").length,
     scripts: [...document.querySelectorAll(".jpimm-word")].reduce((m, s) => (m[s.dataset.script] = (m[s.dataset.script] || 0) + 1, m), {}),

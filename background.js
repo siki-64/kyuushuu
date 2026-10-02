@@ -5,8 +5,8 @@ const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 const DEFAULT_SETTINGS = {
   enabled: true,
   levels: ["N5"],
-  density: 5, // percent of eligible matches that get replaced
-  maxPerPage: 30,
+  density: 15, // percent of eligible matches that get replaced
+  maxPerPage: 60,
   blocklist: [],
   // Relative weights (%) for which script a replaced word is shown in.
   scriptWeights: { kanji: 60, kana: 30, romaji: 10 }

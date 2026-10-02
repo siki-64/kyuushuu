@@ -45,14 +45,14 @@ async function init() {
     renderStats();
   };
 
-  $("density").value = settings.density ?? 5;
+  $("density").value = settings.density ?? 15;
   $("densityOut").textContent = `${$("density").value}%`;
   $("density").oninput = (e) => {
     $("densityOut").textContent = `${e.target.value}%`;
     save({ density: Number(e.target.value) });
   };
 
-  $("maxPerPage").value = settings.maxPerPage ?? 30;
+  $("maxPerPage").value = settings.maxPerPage ?? 60;
   $("maxOut").textContent = $("maxPerPage").value;
   $("maxPerPage").oninput = (e) => {
     $("maxOut").textContent = e.target.value;

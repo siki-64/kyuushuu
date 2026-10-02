@@ -1,11 +1,21 @@
 #!/usr/bin/env python3
-"""Generate data/n*.json from the compact word lists below.
+"""Generate data/n*.json.
+
+Two sources are merged:
+  1. The hand-curated LISTS below, which take priority for their English
+     keys (clean, unambiguous everyday words).
+  2. The open JLPT vocabulary lists in tools/sources/*.csv
+     (github.com/jamsinclair/open-anki-jlpt-decks, MIT; English glosses
+     derived from JMdict, EDRDG, CC BY-SA). From these, single-word English
+     glosses become match keys; each key belongs to the first (easiest)
+     word that claims it.
+
 
 Format per line: english[,alt english] | kanji form | kana | romaji
 The first English gloss also gets rough -s/-ed inflections in the content
 script, so keep it a plain, unambiguous content word.
 """
-import json, pathlib
+import csv, json, pathlib, re
 
 LISTS = {
 "n5": """
@@ -407,17 +417,129 @@ profound|深遠|しんえん|shin'en
 """,
 }
 
-out_dir = pathlib.Path(__file__).resolve().parent.parent / "data"
-seen_en = {}
-for level, block in LISTS.items():
-    entries = []
-    for line in block.strip().splitlines():
-        en, ja, kana, romaji = [p.strip() for p in line.split("|")]
-        glosses = [g.strip() for g in en.split(",")]
-        for g in glosses:
-            if g in seen_en:
-                raise SystemExit(f"duplicate English gloss {g!r} in {level} (also {seen_en[g]})")
-            seen_en[g] = level
-        entries.append({"en": glosses, "ja": ja, "kana": kana, "romaji": romaji})
-    (out_dir / f"{level}.json").write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print(level, len(entries))
+
+# Function words and highly ambiguous English words that would produce
+# nonsense replacements in running text.
+STOPWORDS = set("""
+a an the and or but if of in on at to for from by with about as into onto than then so too very
+i me my mine you your yours he him his she her hers it its we us our they them their this that these those
+is am are was were be been being do does did done have has had having get got make made go went gone come came
+take took see saw seen say said tell told know knew give gave put let keep kept become became seem
+will would shall should can could may might must ought
+not no yes oh ah eh hey hi hello ok okay well also just only even still yet already ever never always
+here there where when what which who whom whose why how all any some each every both either neither
+more most less least much many few lot lots one two three four five six seven eight nine ten
+up down out off over under again once own same other another such else
+thing things way ways part kind sort type case point fact matter something nothing anything everything
+mr mrs ms sir dear etc e.g ie per via vs
+like right left mean means set sets fine free fair last next first second state states present
+lead leads lie lies bear bears fly flies can't don't won't i'm it's
+because since while until though although after before around through during without within between among
+against toward towards upon onto across behind beyond near along beside besides except unless whether
+maybe perhaps really quite rather almost enough instead indeed anyway however therefore thus hence
+used use uses please thanks thank sorry yeah wow alas hmm
+able about above below inside outside per plus minus
+spring fall bat bark bow tear wind wound row lead sound close live minute object content desert
+""".split())
+
+# Hepburn-style romaji, matching the style of the curated list (long vowels as ou/uu).
+_DIGRAPHS = {
+ "きゃ":"kya","きゅ":"kyu","きょ":"kyo","しゃ":"sha","しゅ":"shu","しょ":"sho","ちゃ":"cha","ちゅ":"chu","ちょ":"cho",
+ "にゃ":"nya","にゅ":"nyu","にょ":"nyo","ひゃ":"hya","ひゅ":"hyu","ひょ":"hyo","みゃ":"mya","みゅ":"myu","みょ":"myo",
+ "りゃ":"rya","りゅ":"ryu","りょ":"ryo","ぎゃ":"gya","ぎゅ":"gyu","ぎょ":"gyo","じゃ":"ja","じゅ":"ju","じょ":"jo",
+ "びゃ":"bya","びゅ":"byu","びょ":"byo","ぴゃ":"pya","ぴゅ":"pyu","ぴょ":"pyo","ぢゃ":"ja","ぢゅ":"ju","ぢょ":"jo",
+ "しぇ":"she","ちぇ":"che","じぇ":"je","てぃ":"ti","でぃ":"di","とぅ":"tu","どぅ":"du","ふぁ":"fa","ふぃ":"fi","ふぇ":"fe","ふぉ":"fo",
+ "うぃ":"wi","うぇ":"we","うぉ":"wo","ゔぁ":"va","ゔぃ":"vi","ゔぇ":"ve","ゔぉ":"vo","つぁ":"tsa","いぇ":"ye",
+}
+_MONO = dict(zip(
+ "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをんがぎぐげござじずぜぞだぢづでどばびぶべぼぱぴぷぺぽゔぁぃぅぇぉゃゅょゎ",
+ "a i u e o ka ki ku ke ko sa shi su se so ta chi tsu te to na ni nu ne no ha hi fu he ho ma mi mu me mo ya yu yo ra ri ru re ro wa wo n ga gi gu ge go za ji zu ze zo da ji zu de do ba bi bu be bo pa pi pu pe po vu a i u e o ya yu yo wa".split()))
+
+def to_romaji(kana):
+    # Katakana -> hiragana.
+    s = "".join(chr(ord(c) - 0x60) if "ァ" <= c <= "ヶ" else c for c in kana)
+    out = []
+    i = 0
+    double = False
+    while i < len(s):
+        c = s[i]
+        if c == "っ":
+            double = True; i += 1; continue
+        if c == "ー":
+            if out and out[-1][-1:] in "aiueo": out.append(out[-1][-1])
+            i += 1; continue
+        syl = _DIGRAPHS.get(s[i:i+2])
+        if syl: i += 2
+        else:
+            syl = _MONO.get(c, c if c.isascii() else "")
+            i += 1
+        if double and syl:
+            syl = ("t" + syl) if syl.startswith("ch") else (syl[0] + syl)
+            double = False
+        if syl == "n" and i < len(s) and (_MONO.get(s[i], "x")[0] in "aiueoy"):
+            syl = "n'"
+        out.append(syl)
+    return "".join(out)
+
+def first_variant(field):
+    return re.split(r"[;；、,]", field)[0].strip()
+
+def gloss_keys(meaning):
+    """Single-word English keys from a JMdict-style meaning string."""
+    keys = []
+    meaning = re.sub(r"\([^)]*\)", "", meaning)
+    for sense in re.split(r"[;,/]", meaning)[:4]:
+        g = sense.strip().lower()
+        g = re.sub(r"^(to be|to|a|an|the)\s+", "", g)
+        g = g.strip(" .!?'\"")
+        if not re.fullmatch(r"[a-z]{3,}", g) or g in STOPWORDS:
+            continue
+        if g not in keys:
+            keys.append(g)
+    return keys[:3]
+
+def main():
+    root = pathlib.Path(__file__).resolve().parent
+    out_dir = root.parent / "data"
+    claimed = {}
+    levels = {}
+
+    # 1. Curated words claim their keys first.
+    for level, block in LISTS.items():
+        entries = []
+        for line in block.strip().splitlines():
+            en, ja, kana, romaji = [p.strip() for p in line.split("|")]
+            glosses = [g.strip() for g in en.split(",")]
+            for g in glosses:
+                if g in claimed:
+                    raise SystemExit(f"duplicate curated gloss {g!r} in {level} (also {claimed[g]})")
+                claimed[g] = level
+            entries.append({"en": glosses, "ja": ja, "kana": kana, "romaji": romaji})
+        levels[level] = entries
+
+    # 2. Open JLPT lists fill in the rest, easiest level first.
+    curated_ja = {e["ja"] for es in levels.values() for e in es}
+    for level in ["n5", "n4", "n3", "n2", "n1"]:
+        with open(root / "sources" / f"{level}.csv", encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                ja = first_variant(row["expression"])
+                kana = first_variant(row["reading"])
+                if not ja or not kana or ja in curated_ja:
+                    continue
+                keys = [k for k in gloss_keys(row["meaning"]) if k not in claimed]
+                if not keys:
+                    continue
+                for k in keys:
+                    claimed[k] = level
+                curated_ja.add(ja)
+                levels[level].append({"en": keys, "ja": ja, "kana": kana, "romaji": to_romaji(kana)})
+
+    for level, entries in levels.items():
+        (out_dir / f"{level}.json").write_text(
+            json.dumps(entries, ensure_ascii=False, separators=(",", ":")).replace('},{', '},\n{') + "\n",
+            encoding="utf-8")
+        print(level, len(entries))
+    print("total", sum(len(e) for e in levels.values()), "english keys", len(claimed))
+
+if __name__ == "__main__":
+    main()

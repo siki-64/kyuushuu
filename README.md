@@ -19,7 +19,13 @@ The options page lists every word with its exposure count and lets you toggle **
 - `content/content.js` walks the page's text nodes and skips code, inputs, editable areas and pages already in Japanese. It matches English words, including rough -s/-ed forms, and swaps a share of them for Japanese. A `MutationObserver` covers dynamically loaded content.
 
 ## Vocabulary data
-The word lists are hand-curated, and the JLPT level assignments are approximate. To edit them, change `tools/build_data.py` and run `python3 tools/build_data.py` to regenerate `data/`.
+There are about 4,200 words (N5 441 · N4 452 · N3 1,357 · N2 785 · N1 1,164) and about 5,600 English match keys. They come from two sources:
+- A small hand-curated core list in `tools/build_data.py`, which has priority.
+- The open JLPT lists from [open-anki-jlpt-decks](https://github.com/jamsinclair/open-anki-jlpt-decks) (MIT, see `tools/sources/LICENSE`). Their English glosses come from [JMdict](https://www.edrdg.org/jmdict/j_jmdict.html) (© EDRDG, CC BY-SA 4.0).
+
+When several Japanese words share an English gloss, the easiest level wins. Function words and very ambiguous English words are excluded. Romaji is generated automatically. JLPT levels are unofficial estimates.
+
+To regenerate `data/`, run `python3 tools/build_data.py`.
 
 ## Testing
 `NODE_PATH=$(npm root -g) node test/e2e.js` loads the extension in Chromium with Playwright and checks replacement, skipped elements, dynamic content, the tooltip, marking a word known and disabling the extension.
