@@ -46,8 +46,9 @@ async function updateProgress(mutate) {
 
 chrome.runtime.onInstalled.addListener(async () => {
   // Fill in any missing settings without clobbering existing ones.
-  const settings = await getSettings();
-  await chrome.storage.sync.set(settings);
+  const stored = await chrome.storage.sync.get(null);
+  const missing = Object.fromEntries(Object.entries(DEFAULT_SETTINGS).filter(([k]) => !(k in stored)));
+  if (Object.keys(missing).length) await chrome.storage.sync.set(missing);
 });
 
 const handlers = {

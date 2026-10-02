@@ -170,6 +170,53 @@ beautiful|綺麗|きれい|kirei
 quiet|静か|しずか|shizuka
 famous|有名|ゆうめい|yuumei
 healthy|元気|げんき|genki
+two|二|に|ni
+three|三|さん|san
+four|四|よん|yon
+five|五|ご|go
+six|六|ろく|roku
+seven|七|なな|nana
+eight|八|はち|hachi
+nine|九|きゅう|kyuu
+ten|十|じゅう|juu
+hundred|百|ひゃく|hyaku
+thousand|千|せん|sen
+ten thousand|一万|いちまん|ichiman
+hundred thousand|十万|じゅうまん|juuman
+million|百万|ひゃくまん|hyakuman
+billion|十億|じゅうおく|juuoku
+spring|春|はる|haru
+summer|夏|なつ|natsu
+autumn|秋|あき|aki
+winter|冬|ふゆ|fuyu
+season|季節|きせつ|kisetsu
+green|緑|みどり|midori
+yellow|黄色|きいろ|kiiro
+brown|茶色|ちゃいろ|chairo
+purple|紫|むらさき|murasaki
+pink|ピンク|ぴんく|pinku
+orange|オレンジ|おれんじ|orenji
+gray,grey|灰色|はいいろ|haiiro
+gold|金色|きんいろ|kin'iro
+silver|銀色|ぎんいろ|gin'iro
+january|一月|いちがつ|ichigatsu
+february|二月|にがつ|nigatsu
+march|三月|さんがつ|sangatsu
+april|四月|しがつ|shigatsu
+june|六月|ろくがつ|rokugatsu
+july|七月|しちがつ|shichigatsu
+august|八月|はちがつ|hachigatsu
+september|九月|くがつ|kugatsu
+october|十月|じゅうがつ|juugatsu
+november|十一月|じゅういちがつ|juuichigatsu
+december|十二月|じゅうにがつ|juunigatsu
+monday|月曜日|げつようび|getsuyoubi
+tuesday|火曜日|かようび|kayoubi
+wednesday|水曜日|すいようび|suiyoubi
+thursday|木曜日|もくようび|mokuyoubi
+friday|金曜日|きんようび|kin'youbi
+saturday|土曜日|どようび|doyoubi
+sunday|日曜日|にちようび|nichiyoubi
 red|赤い|あかい|akai
 blue|青い|あおい|aoi
 white|白い|しろい|shiroi
@@ -428,7 +475,7 @@ take took see saw seen say said tell told know knew give gave put let keep kept 
 will would shall should can could may might must ought
 not no yes oh ah eh hey hi hello ok okay well also just only even still yet already ever never always
 here there where when what which who whom whose why how all any some each every both either neither
-more most less least much many few lot lots one two three four five six seven eight nine ten
+more most less least much many few lot lots one
 up down out off over under again once own same other another such else
 thing things way ways part kind sort type case point fact matter something nothing anything everything
 mr mrs ms sir dear etc e.g ie per via vs

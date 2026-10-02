@@ -19,7 +19,7 @@ The options page lists every word with its exposure count and lets you toggle **
 - `content/content.js` walks the page's text nodes and skips code, inputs, editable areas and pages already in Japanese. It matches English words, including rough -s/-ed forms, and swaps a share of them for Japanese. A `MutationObserver` covers dynamically loaded content.
 
 ## Vocabulary data
-There are about 4,200 words (N5 441 · N4 452 · N3 1,357 · N2 785 · N1 1,164) and about 5,600 English match keys. They come from two sources:
+There are about 4,200 words (N5 474 · N4 451 · N3 1,356 · N2 782 · N1 1,163) and about 5,600 English match keys. Numbers (two–ten, hundred, thousand, ten thousand, hundred thousand, million, billion), seasons, colors, months and weekdays are included. Multi-word keys such as "ten thousand" match as one word. They come from two sources:
 - A small hand-curated core list in `tools/build_data.py`, which has priority.
 - The open JLPT lists from [open-anki-jlpt-decks](https://github.com/jamsinclair/open-anki-jlpt-decks) (MIT, see `tools/sources/LICENSE`). Their English glosses come from [JMdict](https://www.edrdg.org/jmdict/j_jmdict.html) (© EDRDG, CC BY-SA 4.0).
 

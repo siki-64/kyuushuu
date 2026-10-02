@@ -12,6 +12,7 @@
 
   let settings = null;
   let lookup = null; // lowercase English form -> entry
+  let phrases = null; // first word -> [{ phrase, entry }] for multi-word keys, longest first
   let replacedCount = 0;
   const perWord = new Map(); // ja -> count on this page
   const seenThisPage = new Set();
@@ -53,14 +54,36 @@
 
   function buildLookup(words) {
     const map = new Map();
+    phrases = new Map();
     for (const entry of words) {
       entry.en.forEach((en, i) => {
         // Only the first gloss gets inflected forms, to limit false matches.
-        const variants = i === 0 ? forms(en) : [en.toLowerCase()];
+        const lower = en.toLowerCase();
+        if (lower.includes(" ")) {
+          const first = lower.split(" ")[0];
+          if (!phrases.has(first)) phrases.set(first, []);
+          phrases.get(first).push({ phrase: lower, entry });
+          return;
+        }
+        const variants = i === 0 ? forms(en) : [lower];
         for (const f of variants) if (!map.has(f)) map.set(f, entry);
       });
     }
+    for (const list of phrases.values()) list.sort((a, b) => b.phrase.length - a.phrase.length);
     return map;
+  }
+
+  // Longest multi-word phrase starting at this position, e.g. "ten thousand".
+  function matchPhrase(text, index, word) {
+    const list = phrases.get(word.toLowerCase());
+    if (!list) return null;
+    const rest = text.slice(index).toLowerCase();
+    for (const p of list) {
+      if (rest.startsWith(p.phrase) && !/[a-z]/i.test(rest.charAt(p.phrase.length))) {
+        return { entry: p.entry, original: text.slice(index, index + p.phrase.length) };
+      }
+    }
+    return null;
   }
 
   function shouldSkip(node) {
@@ -116,10 +139,18 @@
     let frag = null;
     while ((match = WORD_RE.exec(text))) {
       if (replacedCount >= settings.maxPerPage) break;
-      const word = match[0];
+      let word = match[0];
       // Skip acronyms / shouting, which are rarely the plain word.
       if (word.length > 1 && word === word.toUpperCase()) continue;
-      const entry = lookup.get(word.toLowerCase());
+      let entry;
+      const phrase = matchPhrase(text, match.index, word);
+      if (phrase) {
+        entry = phrase.entry;
+        word = phrase.original;
+        WORD_RE.lastIndex = match.index + word.length;
+      } else {
+        entry = lookup.get(word.toLowerCase());
+      }
       if (!entry) continue;
       if ((perWord.get(entry.ja) || 0) >= MAX_PER_WORD) continue;
       if (Math.random() * 100 >= settings.density) continue;

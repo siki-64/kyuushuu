@@ -9,6 +9,8 @@ const path = require("path");
   });
   let [sw] = ctx.serviceWorkers();
   if (!sw) sw = await ctx.waitForEvent("serviceworker");
+  // Let onInstalled write its defaults first, then override them.
+  await sw.evaluate(() => new Promise((r) => setTimeout(r, 500)));
   await sw.evaluate(() => chrome.storage.sync.set({ enabled: true, levels: ["N5", "N4"], density: 100, maxPerPage: 100, scriptWeights: { kanji: 34, kana: 33, romaji: 33 } }));
   const page = await ctx.newPage();
   const url = "file://" + path.join(__dirname, "page.html");
@@ -24,6 +26,9 @@ const path = require("path");
     dyn: document.getElementById("dyn").innerHTML
   }));
   console.log(JSON.stringify(r, null, 1));
+  const nums = await page.$$eval("#nums .jpimm-word", (els) => els.map((e) => `${e.dataset.en}=${e.dataset.ja}`));
+  console.log("nums:", nums.join(" "));
+  if (!nums.includes("ten thousand=一万")) throw new Error("phrase match failed");
   if (!r.count || r.code !== "const water = fire + dog; // eat drink" || r.inp !== "water dog cat eat") throw new Error("bad");
   if (!r.dyn.includes("jpimm-word")) throw new Error("mutation observer failed");
   await page.hover(".jpimm-word");
@@ -38,6 +43,8 @@ const path = require("path");
   const prog = await sw.evaluate(() => chrome.storage.local.get("progress"));
   console.log("progress entries:", Object.keys(prog.progress).length, "known:", prog.progress[ja]?.known);
   // Disabled.
+  // Let onInstalled write its defaults first, then override them.
+  await sw.evaluate(() => new Promise((r) => setTimeout(r, 500)));
   await sw.evaluate(() => chrome.storage.sync.set({ enabled: false }));
   await page.reload(); await page.waitForTimeout(1500);
   console.log("disabled count:", await page.locator(".jpimm-word").count());
