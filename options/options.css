@@ -1,0 +1,17 @@
+:root { --accent: #d64541; --bg: #fafafa; --fg: #1f2023; --muted: #6b6b73; --line: #e6e6ea; }
+@media (prefers-color-scheme: dark) { :root { --bg: #18181b; --fg: #f4f4f5; --muted: #9a9aa2; --line: #36363c; } }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.5 system-ui, sans-serif; }
+main { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+.jp, td.ja { font-family: "Hiragino Sans", "Noto Sans JP", sans-serif; }
+.jp { color: var(--accent); }
+.hint { color: var(--muted); margin: 0 0 6px; }
+textarea, select, input, button { font: inherit; color: inherit; background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+textarea { width: 100%; box-sizing: border-box; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+#search { flex: 1; min-width: 140px; }
+button { cursor: pointer; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 4px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; font-size: 12px; }
+td.num { font-variant-numeric: tabular-nums; }
+input[type=checkbox] { accent-color: var(--accent); }

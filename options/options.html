@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Kyuushuu: Word list</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <h1>Kyuushuu <span class="jp">吸収</span> · word list</h1>
+
+    <section>
+      <h2>Blocked sites</h2>
+      <p class="hint">One domain per line. Subdomains are blocked too.</p>
+      <textarea id="blocklist" rows="4"></textarea>
+    </section>
+
+    <section>
+      <h2>Word list</h2>
+      <div class="toolbar">
+        <select id="level"><option value="">All levels</option></select>
+        <select id="filter">
+          <option value="">All words</option>
+          <option value="seen">Seen</option>
+          <option value="known">Known</option>
+          <option value="unseen">Not seen yet</option>
+        </select>
+        <input id="search" type="search" placeholder="Search…">
+        <button id="reset" type="button">Reset progress</button>
+      </div>
+      <table>
+        <thead><tr><th>Level</th><th>Kanji</th><th>Kana</th><th>Romaji</th><th>English</th><th>Seen</th><th>Known</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Kyuushuu <span class="jp">吸収</span></h1>
+    <label class="switch"><input type="checkbox" id="enabled"><span></span></label>
+  </header>
+
+  <section>
+    <h2>JLPT levels</h2>
+    <div id="levels" class="chips"></div>
+  </section>
+
+  <section>
+    <h2>Words replaced <output id="densityOut"></output></h2>
+    <p class="hint">Share of matching English words that get swapped for Japanese.</p>
+    <input type="range" id="density" min="1" max="100" step="1">
+    <h2>Max words per page <output id="maxOut"></output></h2>
+    <input type="range" id="maxPerPage" min="10" max="300" step="10">
+  </section>
+
+  <section>
+    <h2>Script mix</h2>
+    <p class="hint">Each replaced word is shown in one script, picked at random by these weights.</p>
+    <div class="weight"><label for="w-kanji">Kanji <span class="jp">漢字</span></label><input type="range" id="w-kanji" min="0" max="100"><output id="w-kanji-out"></output></div>
+    <div class="weight"><label for="w-kana">Kana <span class="jp">かな</span></label><input type="range" id="w-kana" min="0" max="100"><output id="w-kana-out"></output></div>
+    <div class="weight"><label for="w-romaji">Romaji</label><input type="range" id="w-romaji" min="0" max="100"><output id="w-romaji-out"></output></div>
+  </section>
+
+  <section>
+    <button id="blockSite" type="button"></button>
+  </section>
+
+  <section class="stats" id="stats"></section>
+
+  <footer><a href="#" id="openOptions">Word list &amp; settings →</a></footer>
+  <script src="popup.js"></script>
+</body>
+</html>
