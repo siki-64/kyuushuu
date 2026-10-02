@@ -1,0 +1,443 @@
+[
+ {
+  "en": [
+   "environment"
+  ],
+  "ja": "環境",
+  "kana": "かんきょう",
+  "romaji": "kankyou"
+ },
+ {
+  "en": [
+   "society"
+  ],
+  "ja": "社会",
+  "kana": "しゃかい",
+  "romaji": "shakai"
+ },
+ {
+  "en": [
+   "government"
+  ],
+  "ja": "政府",
+  "kana": "せいふ",
+  "romaji": "seifu"
+ },
+ {
+  "en": [
+   "population"
+  ],
+  "ja": "人口",
+  "kana": "じんこう",
+  "romaji": "jinkou"
+ },
+ {
+  "en": [
+   "industry"
+  ],
+  "ja": "産業",
+  "kana": "さんぎょう",
+  "romaji": "sangyou"
+ },
+ {
+  "en": [
+   "technology"
+  ],
+  "ja": "技術",
+  "kana": "ぎじゅつ",
+  "romaji": "gijutsu"
+ },
+ {
+  "en": [
+   "research"
+  ],
+  "ja": "研究",
+  "kana": "けんきゅう",
+  "romaji": "kenkyuu"
+ },
+ {
+  "en": [
+   "result"
+  ],
+  "ja": "結果",
+  "kana": "けっか",
+  "romaji": "kekka"
+ },
+ {
+  "en": [
+   "effect"
+  ],
+  "ja": "効果",
+  "kana": "こうか",
+  "romaji": "kouka"
+ },
+ {
+  "en": [
+   "cause"
+  ],
+  "ja": "原因",
+  "kana": "げんいん",
+  "romaji": "gen'in"
+ },
+ {
+  "en": [
+   "purpose"
+  ],
+  "ja": "目的",
+  "kana": "もくてき",
+  "romaji": "mokuteki"
+ },
+ {
+  "en": [
+   "opinion"
+  ],
+  "ja": "意見",
+  "kana": "いけん",
+  "romaji": "iken"
+ },
+ {
+  "en": [
+   "habit"
+  ],
+  "ja": "習慣",
+  "kana": "しゅうかん",
+  "romaji": "shuukan"
+ },
+ {
+  "en": [
+   "character",
+   "personality"
+  ],
+  "ja": "性格",
+  "kana": "せいかく",
+  "romaji": "seikaku"
+ },
+ {
+  "en": [
+   "future"
+  ],
+  "ja": "未来",
+  "kana": "みらい",
+  "romaji": "mirai"
+ },
+ {
+  "en": [
+   "past"
+  ],
+  "ja": "過去",
+  "kana": "かこ",
+  "romaji": "kako"
+ },
+ {
+  "en": [
+   "situation"
+  ],
+  "ja": "状況",
+  "kana": "じょうきょう",
+  "romaji": "joukyou"
+ },
+ {
+  "en": [
+   "condition"
+  ],
+  "ja": "状態",
+  "kana": "じょうたい",
+  "romaji": "joutai"
+ },
+ {
+  "en": [
+   "energy"
+  ],
+  "ja": "エネルギー",
+  "kana": "えねるぎー",
+  "romaji": "enerugii"
+ },
+ {
+  "en": [
+   "attention"
+  ],
+  "ja": "注意",
+  "kana": "ちゅうい",
+  "romaji": "chuui"
+ },
+ {
+  "en": [
+   "advice"
+  ],
+  "ja": "アドバイス",
+  "kana": "あどばいす",
+  "romaji": "adobaisu"
+ },
+ {
+  "en": [
+   "promise"
+  ],
+  "ja": "約束",
+  "kana": "やくそく",
+  "romaji": "yakusoku"
+ },
+ {
+  "en": [
+   "success"
+  ],
+  "ja": "成功",
+  "kana": "せいこう",
+  "romaji": "seikou"
+ },
+ {
+  "en": [
+   "effort"
+  ],
+  "ja": "努力",
+  "kana": "どりょく",
+  "romaji": "doryoku"
+ },
+ {
+  "en": [
+   "victory"
+  ],
+  "ja": "勝利",
+  "kana": "しょうり",
+  "romaji": "shouri"
+ },
+ {
+  "en": [
+   "freedom"
+  ],
+  "ja": "自由",
+  "kana": "じゆう",
+  "romaji": "jiyuu"
+ },
+ {
+  "en": [
+   "peace"
+  ],
+  "ja": "平和",
+  "kana": "へいわ",
+  "romaji": "heiwa"
+ },
+ {
+  "en": [
+   "nature"
+  ],
+  "ja": "自然",
+  "kana": "しぜん",
+  "romaji": "shizen"
+ },
+ {
+  "en": [
+   "universe"
+  ],
+  "ja": "宇宙",
+  "kana": "うちゅう",
+  "romaji": "uchuu"
+ },
+ {
+  "en": [
+   "planet"
+  ],
+  "ja": "惑星",
+  "kana": "わくせい",
+  "romaji": "wakusei"
+ },
+ {
+  "en": [
+   "customer"
+  ],
+  "ja": "顧客",
+  "kana": "こきゃく",
+  "romaji": "kokyaku"
+ },
+ {
+  "en": [
+   "salary"
+  ],
+  "ja": "給料",
+  "kana": "きゅうりょう",
+  "romaji": "kyuuryou"
+ },
+ {
+  "en": [
+   "contract"
+  ],
+  "ja": "契約",
+  "kana": "けいやく",
+  "romaji": "keiyaku"
+ },
+ {
+  "en": [
+   "election"
+  ],
+  "ja": "選挙",
+  "kana": "せんきょ",
+  "romaji": "senkyo"
+ },
+ {
+  "en": [
+   "increase"
+  ],
+  "ja": "増える",
+  "kana": "ふえる",
+  "romaji": "fueru"
+ },
+ {
+  "en": [
+   "decrease"
+  ],
+  "ja": "減る",
+  "kana": "へる",
+  "romaji": "heru"
+ },
+ {
+  "en": [
+   "compare"
+  ],
+  "ja": "比べる",
+  "kana": "くらべる",
+  "romaji": "kuraberu"
+ },
+ {
+  "en": [
+   "protect"
+  ],
+  "ja": "守る",
+  "kana": "まもる",
+  "romaji": "mamoru"
+ },
+ {
+  "en": [
+   "develop"
+  ],
+  "ja": "発展する",
+  "kana": "はってんする",
+  "romaji": "hatten suru"
+ },
+ {
+  "en": [
+   "improve"
+  ],
+  "ja": "改善する",
+  "kana": "かいぜんする",
+  "romaji": "kaizen suru"
+ },
+ {
+  "en": [
+   "support"
+  ],
+  "ja": "支える",
+  "kana": "ささえる",
+  "romaji": "sasaeru"
+ },
+ {
+  "en": [
+   "suggest"
+  ],
+  "ja": "提案する",
+  "kana": "ていあんする",
+  "romaji": "teian suru"
+ },
+ {
+  "en": [
+   "avoid"
+  ],
+  "ja": "避ける",
+  "kana": "さける",
+  "romaji": "sakeru"
+ },
+ {
+  "en": [
+   "discover"
+  ],
+  "ja": "発見する",
+  "kana": "はっけんする",
+  "romaji": "hakken suru"
+ },
+ {
+  "en": [
+   "imagine"
+  ],
+  "ja": "想像する",
+  "kana": "そうぞうする",
+  "romaji": "souzou suru"
+ },
+ {
+  "en": [
+   "apologize"
+  ],
+  "ja": "謝る",
+  "kana": "あやまる",
+  "romaji": "ayamaru"
+ },
+ {
+  "en": [
+   "complain"
+  ],
+  "ja": "文句を言う",
+  "kana": "もんくをいう",
+  "romaji": "monku wo iu"
+ },
+ {
+  "en": [
+   "recently"
+  ],
+  "ja": "最近",
+  "kana": "さいきん",
+  "romaji": "saikin"
+ },
+ {
+  "en": [
+   "probably"
+  ],
+  "ja": "多分",
+  "kana": "たぶん",
+  "romaji": "tabun"
+ },
+ {
+  "en": [
+   "suddenly"
+  ],
+  "ja": "突然",
+  "kana": "とつぜん",
+  "romaji": "totsuzen"
+ },
+ {
+  "en": [
+   "honest"
+  ],
+  "ja": "正直",
+  "kana": "しょうじき",
+  "romaji": "shoujiki"
+ },
+ {
+  "en": [
+   "serious"
+  ],
+  "ja": "真剣",
+  "kana": "しんけん",
+  "romaji": "shinken"
+ },
+ {
+  "en": [
+   "popular"
+  ],
+  "ja": "人気",
+  "kana": "にんき",
+  "romaji": "ninki"
+ },
+ {
+  "en": [
+   "modern"
+  ],
+  "ja": "現代的",
+  "kana": "げんだいてき",
+  "romaji": "gendaiteki"
+ },
+ {
+  "en": [
+   "traditional"
+  ],
+  "ja": "伝統的",
+  "kana": "でんとうてき",
+  "romaji": "dentouteki"
+ }
+]

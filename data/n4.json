@@ -1,0 +1,910 @@
+[
+ {
+  "en": [
+   "dream"
+  ],
+  "ja": "夢",
+  "kana": "ゆめ",
+  "romaji": "yume"
+ },
+ {
+  "en": [
+   "heart"
+  ],
+  "ja": "心",
+  "kana": "こころ",
+  "romaji": "kokoro"
+ },
+ {
+  "en": [
+   "voice"
+  ],
+  "ja": "声",
+  "kana": "こえ",
+  "romaji": "koe"
+ },
+ {
+  "en": [
+   "sound"
+  ],
+  "ja": "音",
+  "kana": "おと",
+  "romaji": "oto"
+ },
+ {
+  "en": [
+   "wind"
+  ],
+  "ja": "風",
+  "kana": "かぜ",
+  "romaji": "kaze"
+ },
+ {
+  "en": [
+   "island"
+  ],
+  "ja": "島",
+  "kana": "しま",
+  "romaji": "shima"
+ },
+ {
+  "en": [
+   "forest"
+  ],
+  "ja": "森",
+  "kana": "もり",
+  "romaji": "mori"
+ },
+ {
+  "en": [
+   "moon"
+  ],
+  "ja": "月",
+  "kana": "つき",
+  "romaji": "tsuki"
+ },
+ {
+  "en": [
+   "star"
+  ],
+  "ja": "星",
+  "kana": "ほし",
+  "romaji": "hoshi"
+ },
+ {
+  "en": [
+   "sun"
+  ],
+  "ja": "太陽",
+  "kana": "たいよう",
+  "romaji": "taiyou"
+ },
+ {
+  "en": [
+   "earthquake"
+  ],
+  "ja": "地震",
+  "kana": "じしん",
+  "romaji": "jishin"
+ },
+ {
+  "en": [
+   "village"
+  ],
+  "ja": "村",
+  "kana": "むら",
+  "romaji": "mura"
+ },
+ {
+  "en": [
+   "airport"
+  ],
+  "ja": "空港",
+  "kana": "くうこう",
+  "romaji": "kuukou"
+ },
+ {
+  "en": [
+   "museum"
+  ],
+  "ja": "博物館",
+  "kana": "はくぶつかん",
+  "romaji": "hakubutsukan"
+ },
+ {
+  "en": [
+   "church"
+  ],
+  "ja": "教会",
+  "kana": "きょうかい",
+  "romaji": "kyoukai"
+ },
+ {
+  "en": [
+   "temple"
+  ],
+  "ja": "お寺",
+  "kana": "おてら",
+  "romaji": "otera"
+ },
+ {
+  "en": [
+   "factory"
+  ],
+  "ja": "工場",
+  "kana": "こうじょう",
+  "romaji": "koujou"
+ },
+ {
+  "en": [
+   "office"
+  ],
+  "ja": "事務所",
+  "kana": "じむしょ",
+  "romaji": "jimusho"
+ },
+ {
+  "en": [
+   "company"
+  ],
+  "ja": "会社",
+  "kana": "かいしゃ",
+  "romaji": "kaisha"
+ },
+ {
+  "en": [
+   "meeting"
+  ],
+  "ja": "会議",
+  "kana": "かいぎ",
+  "romaji": "kaigi"
+ },
+ {
+  "en": [
+   "job",
+   "work"
+  ],
+  "ja": "仕事",
+  "kana": "しごと",
+  "romaji": "shigoto"
+ },
+ {
+  "en": [
+   "plan"
+  ],
+  "ja": "計画",
+  "kana": "けいかく",
+  "romaji": "keikaku"
+ },
+ {
+  "en": [
+   "problem"
+  ],
+  "ja": "問題",
+  "kana": "もんだい",
+  "romaji": "mondai"
+ },
+ {
+  "en": [
+   "answer"
+  ],
+  "ja": "答え",
+  "kana": "こたえ",
+  "romaji": "kotae"
+ },
+ {
+  "en": [
+   "reason"
+  ],
+  "ja": "理由",
+  "kana": "りゆう",
+  "romaji": "riyuu"
+ },
+ {
+  "en": [
+   "example"
+  ],
+  "ja": "例",
+  "kana": "れい",
+  "romaji": "rei"
+ },
+ {
+  "en": [
+   "culture"
+  ],
+  "ja": "文化",
+  "kana": "ぶんか",
+  "romaji": "bunka"
+ },
+ {
+  "en": [
+   "history"
+  ],
+  "ja": "歴史",
+  "kana": "れきし",
+  "romaji": "rekishi"
+ },
+ {
+  "en": [
+   "science"
+  ],
+  "ja": "科学",
+  "kana": "かがく",
+  "romaji": "kagaku"
+ },
+ {
+  "en": [
+   "art"
+  ],
+  "ja": "芸術",
+  "kana": "げいじゅつ",
+  "romaji": "geijutsu"
+ },
+ {
+  "en": [
+   "economy"
+  ],
+  "ja": "経済",
+  "kana": "けいざい",
+  "romaji": "keizai"
+ },
+ {
+  "en": [
+   "politics"
+  ],
+  "ja": "政治",
+  "kana": "せいじ",
+  "romaji": "seiji"
+ },
+ {
+  "en": [
+   "law"
+  ],
+  "ja": "法律",
+  "kana": "ほうりつ",
+  "romaji": "houritsu"
+ },
+ {
+  "en": [
+   "rule"
+  ],
+  "ja": "規則",
+  "kana": "きそく",
+  "romaji": "kisoku"
+ },
+ {
+  "en": [
+   "news"
+  ],
+  "ja": "ニュース",
+  "kana": "にゅーす",
+  "romaji": "nyuusu"
+ },
+ {
+  "en": [
+   "information"
+  ],
+  "ja": "情報",
+  "kana": "じょうほう",
+  "romaji": "jouhou"
+ },
+ {
+  "en": [
+   "computer"
+  ],
+  "ja": "パソコン",
+  "kana": "ぱそこん",
+  "romaji": "pasokon"
+ },
+ {
+  "en": [
+   "program"
+  ],
+  "ja": "番組",
+  "kana": "ばんぐみ",
+  "romaji": "bangumi"
+ },
+ {
+  "en": [
+   "game"
+  ],
+  "ja": "ゲーム",
+  "kana": "げーむ",
+  "romaji": "geemu"
+ },
+ {
+  "en": [
+   "sport"
+  ],
+  "ja": "スポーツ",
+  "kana": "すぽーつ",
+  "romaji": "supootsu"
+ },
+ {
+  "en": [
+   "gift",
+   "present"
+  ],
+  "ja": "お土産",
+  "kana": "おみやげ",
+  "romaji": "omiyage"
+ },
+ {
+  "en": [
+   "price"
+  ],
+  "ja": "値段",
+  "kana": "ねだん",
+  "romaji": "nedan"
+ },
+ {
+  "en": [
+   "medicine"
+  ],
+  "ja": "薬",
+  "kana": "くすり",
+  "romaji": "kusuri"
+ },
+ {
+  "en": [
+   "doctor"
+  ],
+  "ja": "医者",
+  "kana": "いしゃ",
+  "romaji": "isha"
+ },
+ {
+  "en": [
+   "nurse"
+  ],
+  "ja": "看護師",
+  "kana": "かんごし",
+  "romaji": "kangoshi"
+ },
+ {
+  "en": [
+   "police"
+  ],
+  "ja": "警察",
+  "kana": "けいさつ",
+  "romaji": "keisatsu"
+ },
+ {
+  "en": [
+   "husband"
+  ],
+  "ja": "夫",
+  "kana": "おっと",
+  "romaji": "otto"
+ },
+ {
+  "en": [
+   "wife"
+  ],
+  "ja": "妻",
+  "kana": "つま",
+  "romaji": "tsuma"
+ },
+ {
+  "en": [
+   "boyfriend"
+  ],
+  "ja": "彼氏",
+  "kana": "かれし",
+  "romaji": "kareshi"
+ },
+ {
+  "en": [
+   "girlfriend"
+  ],
+  "ja": "彼女",
+  "kana": "かのじょ",
+  "romaji": "kanojo"
+ },
+ {
+  "en": [
+   "baby"
+  ],
+  "ja": "赤ちゃん",
+  "kana": "あかちゃん",
+  "romaji": "akachan"
+ },
+ {
+  "en": [
+   "guest"
+  ],
+  "ja": "客",
+  "kana": "きゃく",
+  "romaji": "kyaku"
+ },
+ {
+  "en": [
+   "neighbor"
+  ],
+  "ja": "隣人",
+  "kana": "りんじん",
+  "romaji": "rinjin"
+ },
+ {
+  "en": [
+   "glass"
+  ],
+  "ja": "ガラス",
+  "kana": "がらす",
+  "romaji": "garasu"
+ },
+ {
+  "en": [
+   "mirror"
+  ],
+  "ja": "鏡",
+  "kana": "かがみ",
+  "romaji": "kagami"
+ },
+ {
+  "en": [
+   "kitchen"
+  ],
+  "ja": "台所",
+  "kana": "だいどころ",
+  "romaji": "daidokoro"
+ },
+ {
+  "en": [
+   "garden"
+  ],
+  "ja": "庭",
+  "kana": "にわ",
+  "romaji": "niwa"
+ },
+ {
+  "en": [
+   "wall"
+  ],
+  "ja": "壁",
+  "kana": "かべ",
+  "romaji": "kabe"
+ },
+ {
+  "en": [
+   "roof"
+  ],
+  "ja": "屋根",
+  "kana": "やね",
+  "romaji": "yane"
+ },
+ {
+  "en": [
+   "stairs"
+  ],
+  "ja": "階段",
+  "kana": "かいだん",
+  "romaji": "kaidan"
+ },
+ {
+  "en": [
+   "travel",
+   "trip"
+  ],
+  "ja": "旅行",
+  "kana": "りょこう",
+  "romaji": "ryokou"
+ },
+ {
+  "en": [
+   "experience"
+  ],
+  "ja": "経験",
+  "kana": "けいけん",
+  "romaji": "keiken"
+ },
+ {
+  "en": [
+   "memory"
+  ],
+  "ja": "思い出",
+  "kana": "おもいで",
+  "romaji": "omoide"
+ },
+ {
+  "en": [
+   "smell"
+  ],
+  "ja": "匂い",
+  "kana": "におい",
+  "romaji": "nioi"
+ },
+ {
+  "en": [
+   "taste"
+  ],
+  "ja": "味",
+  "kana": "あじ",
+  "romaji": "aji"
+ },
+ {
+  "en": [
+   "color"
+  ],
+  "ja": "色",
+  "kana": "いろ",
+  "romaji": "iro"
+ },
+ {
+  "en": [
+   "shape"
+  ],
+  "ja": "形",
+  "kana": "かたち",
+  "romaji": "katachi"
+ },
+ {
+  "en": [
+   "size"
+  ],
+  "ja": "大きさ",
+  "kana": "おおきさ",
+  "romaji": "ookisa"
+ },
+ {
+  "en": [
+   "war"
+  ],
+  "ja": "戦争",
+  "kana": "せんそう",
+  "romaji": "sensou"
+ },
+ {
+  "en": [
+   "accident"
+  ],
+  "ja": "事故",
+  "kana": "じこ",
+  "romaji": "jiko"
+ },
+ {
+  "en": [
+   "fail"
+  ],
+  "ja": "失敗する",
+  "kana": "しっぱいする",
+  "romaji": "shippai suru"
+ },
+ {
+  "en": [
+   "decide"
+  ],
+  "ja": "決める",
+  "kana": "きめる",
+  "romaji": "kimeru"
+ },
+ {
+  "en": [
+   "change"
+  ],
+  "ja": "変える",
+  "kana": "かえる",
+  "romaji": "kaeru"
+ },
+ {
+  "en": [
+   "begin",
+   "start"
+  ],
+  "ja": "始める",
+  "kana": "はじめる",
+  "romaji": "hajimeru"
+ },
+ {
+  "en": [
+   "finish"
+  ],
+  "ja": "終わる",
+  "kana": "おわる",
+  "romaji": "owaru"
+ },
+ {
+  "en": [
+   "continue"
+  ],
+  "ja": "続ける",
+  "kana": "つづける",
+  "romaji": "tsuzukeru"
+ },
+ {
+  "en": [
+   "believe"
+  ],
+  "ja": "信じる",
+  "kana": "しんじる",
+  "romaji": "shinjiru"
+ },
+ {
+  "en": [
+   "think"
+  ],
+  "ja": "思う",
+  "kana": "おもう",
+  "romaji": "omou"
+ },
+ {
+  "en": [
+   "understand"
+  ],
+  "ja": "分かる",
+  "kana": "わかる",
+  "romaji": "wakaru"
+ },
+ {
+  "en": [
+   "explain"
+  ],
+  "ja": "説明する",
+  "kana": "せつめいする",
+  "romaji": "setsumei suru"
+ },
+ {
+  "en": [
+   "prepare"
+  ],
+  "ja": "準備する",
+  "kana": "じゅんびする",
+  "romaji": "junbi suru"
+ },
+ {
+  "en": [
+   "practice"
+  ],
+  "ja": "練習する",
+  "kana": "れんしゅうする",
+  "romaji": "renshuu suru"
+ },
+ {
+  "en": [
+   "study"
+  ],
+  "ja": "勉強する",
+  "kana": "べんきょうする",
+  "romaji": "benkyou suru"
+ },
+ {
+  "en": [
+   "cook"
+  ],
+  "ja": "料理する",
+  "kana": "りょうりする",
+  "romaji": "ryouri suru"
+ },
+ {
+  "en": [
+   "clean"
+  ],
+  "ja": "掃除する",
+  "kana": "そうじする",
+  "romaji": "souji suru"
+ },
+ {
+  "en": [
+   "build"
+  ],
+  "ja": "建てる",
+  "kana": "たてる",
+  "romaji": "tateru"
+ },
+ {
+  "en": [
+   "break"
+  ],
+  "ja": "壊す",
+  "kana": "こわす",
+  "romaji": "kowasu"
+ },
+ {
+  "en": [
+   "catch"
+  ],
+  "ja": "捕まえる",
+  "kana": "つかまえる",
+  "romaji": "tsukamaeru"
+ },
+ {
+  "en": [
+   "throw"
+  ],
+  "ja": "投げる",
+  "kana": "なげる",
+  "romaji": "nageru"
+ },
+ {
+  "en": [
+   "push"
+  ],
+  "ja": "押す",
+  "kana": "おす",
+  "romaji": "osu"
+ },
+ {
+  "en": [
+   "pull"
+  ],
+  "ja": "引く",
+  "kana": "ひく",
+  "romaji": "hiku"
+ },
+ {
+  "en": [
+   "choose"
+  ],
+  "ja": "選ぶ",
+  "kana": "えらぶ",
+  "romaji": "erabu"
+ },
+ {
+  "en": [
+   "collect"
+  ],
+  "ja": "集める",
+  "kana": "あつめる",
+  "romaji": "atsumeru"
+ },
+ {
+  "en": [
+   "search"
+  ],
+  "ja": "探す",
+  "kana": "さがす",
+  "romaji": "sagasu"
+ },
+ {
+  "en": [
+   "invite"
+  ],
+  "ja": "招待する",
+  "kana": "しょうたいする",
+  "romaji": "shoutai suru"
+ },
+ {
+  "en": [
+   "visit"
+  ],
+  "ja": "訪ねる",
+  "kana": "たずねる",
+  "romaji": "tazuneru"
+ },
+ {
+  "en": [
+   "laugh"
+  ],
+  "ja": "笑う",
+  "kana": "わらう",
+  "romaji": "warau"
+ },
+ {
+  "en": [
+   "cry"
+  ],
+  "ja": "泣く",
+  "kana": "なく",
+  "romaji": "naku"
+ },
+ {
+  "en": [
+   "angry"
+  ],
+  "ja": "怒る",
+  "kana": "おこる",
+  "romaji": "okoru"
+ },
+ {
+  "en": [
+   "dangerous"
+  ],
+  "ja": "危ない",
+  "kana": "あぶない",
+  "romaji": "abunai"
+ },
+ {
+  "en": [
+   "safe"
+  ],
+  "ja": "安全",
+  "kana": "あんぜん",
+  "romaji": "anzen"
+ },
+ {
+  "en": [
+   "strong"
+  ],
+  "ja": "強い",
+  "kana": "つよい",
+  "romaji": "tsuyoi"
+ },
+ {
+  "en": [
+   "weak"
+  ],
+  "ja": "弱い",
+  "kana": "よわい",
+  "romaji": "yowai"
+ },
+ {
+  "en": [
+   "deep"
+  ],
+  "ja": "深い",
+  "kana": "ふかい",
+  "romaji": "fukai"
+ },
+ {
+  "en": [
+   "soft"
+  ],
+  "ja": "柔らかい",
+  "kana": "やわらかい",
+  "romaji": "yawarakai"
+ },
+ {
+  "en": [
+   "hard"
+  ],
+  "ja": "硬い",
+  "kana": "かたい",
+  "romaji": "katai"
+ },
+ {
+  "en": [
+   "kindness"
+  ],
+  "ja": "親切",
+  "kana": "しんせつ",
+  "romaji": "shinsetsu"
+ },
+ {
+  "en": [
+   "important"
+  ],
+  "ja": "大切",
+  "kana": "たいせつ",
+  "romaji": "taisetsu"
+ },
+ {
+  "en": [
+   "necessary"
+  ],
+  "ja": "必要",
+  "kana": "ひつよう",
+  "romaji": "hitsuyou"
+ },
+ {
+  "en": [
+   "special"
+  ],
+  "ja": "特別",
+  "kana": "とくべつ",
+  "romaji": "tokubetsu"
+ },
+ {
+  "en": [
+   "convenient"
+  ],
+  "ja": "便利",
+  "kana": "べんり",
+  "romaji": "benri"
+ },
+ {
+  "en": [
+   "dirty"
+  ],
+  "ja": "汚い",
+  "kana": "きたない",
+  "romaji": "kitanai"
+ },
+ {
+  "en": [
+   "strange"
+  ],
+  "ja": "変",
+  "kana": "へん",
+  "romaji": "hen"
+ }
+]

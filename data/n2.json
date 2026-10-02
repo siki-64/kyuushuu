@@ -1,0 +1,290 @@
+[
+ {
+  "en": [
+   "evidence"
+  ],
+  "ja": "証拠",
+  "kana": "しょうこ",
+  "romaji": "shouko"
+ },
+ {
+  "en": [
+   "debate"
+  ],
+  "ja": "討論",
+  "kana": "とうろん",
+  "romaji": "touron"
+ },
+ {
+  "en": [
+   "policy"
+  ],
+  "ja": "政策",
+  "kana": "せいさく",
+  "romaji": "seisaku"
+ },
+ {
+  "en": [
+   "budget"
+  ],
+  "ja": "予算",
+  "kana": "よさん",
+  "romaji": "yosan"
+ },
+ {
+  "en": [
+   "profit"
+  ],
+  "ja": "利益",
+  "kana": "りえき",
+  "romaji": "rieki"
+ },
+ {
+  "en": [
+   "investment"
+  ],
+  "ja": "投資",
+  "kana": "とうし",
+  "romaji": "toushi"
+ },
+ {
+  "en": [
+   "crisis"
+  ],
+  "ja": "危機",
+  "kana": "きき",
+  "romaji": "kiki"
+ },
+ {
+  "en": [
+   "disaster"
+  ],
+  "ja": "災害",
+  "kana": "さいがい",
+  "romaji": "saigai"
+ },
+ {
+  "en": [
+   "pollution"
+  ],
+  "ja": "汚染",
+  "kana": "おせん",
+  "romaji": "osen"
+ },
+ {
+  "en": [
+   "resource"
+  ],
+  "ja": "資源",
+  "kana": "しげん",
+  "romaji": "shigen"
+ },
+ {
+  "en": [
+   "analysis"
+  ],
+  "ja": "分析",
+  "kana": "ぶんせき",
+  "romaji": "bunseki"
+ },
+ {
+  "en": [
+   "theory"
+  ],
+  "ja": "理論",
+  "kana": "りろん",
+  "romaji": "riron"
+ },
+ {
+  "en": [
+   "hypothesis"
+  ],
+  "ja": "仮説",
+  "kana": "かせつ",
+  "romaji": "kasetsu"
+ },
+ {
+  "en": [
+   "phenomenon"
+  ],
+  "ja": "現象",
+  "kana": "げんしょう",
+  "romaji": "genshou"
+ },
+ {
+  "en": [
+   "tendency"
+  ],
+  "ja": "傾向",
+  "kana": "けいこう",
+  "romaji": "keikou"
+ },
+ {
+  "en": [
+   "responsibility"
+  ],
+  "ja": "責任",
+  "kana": "せきにん",
+  "romaji": "sekinin"
+ },
+ {
+  "en": [
+   "authority"
+  ],
+  "ja": "権威",
+  "kana": "けんい",
+  "romaji": "ken'i"
+ },
+ {
+  "en": [
+   "negotiation"
+  ],
+  "ja": "交渉",
+  "kana": "こうしょう",
+  "romaji": "koushou"
+ },
+ {
+  "en": [
+   "agreement"
+  ],
+  "ja": "合意",
+  "kana": "ごうい",
+  "romaji": "goui"
+ },
+ {
+  "en": [
+   "criticism"
+  ],
+  "ja": "批判",
+  "kana": "ひはん",
+  "romaji": "hihan"
+ },
+ {
+  "en": [
+   "reputation"
+  ],
+  "ja": "評判",
+  "kana": "ひょうばん",
+  "romaji": "hyouban"
+ },
+ {
+  "en": [
+   "privacy"
+  ],
+  "ja": "プライバシー",
+  "kana": "ぷらいばしー",
+  "romaji": "puraibashii"
+ },
+ {
+  "en": [
+   "architecture"
+  ],
+  "ja": "建築",
+  "kana": "けんちく",
+  "romaji": "kenchiku"
+ },
+ {
+  "en": [
+   "literature"
+  ],
+  "ja": "文学",
+  "kana": "ぶんがく",
+  "romaji": "bungaku"
+ },
+ {
+  "en": [
+   "philosophy"
+  ],
+  "ja": "哲学",
+  "kana": "てつがく",
+  "romaji": "tetsugaku"
+ },
+ {
+  "en": [
+   "estimate"
+  ],
+  "ja": "見積もる",
+  "kana": "みつもる",
+  "romaji": "mitsumoru"
+ },
+ {
+  "en": [
+   "emphasize"
+  ],
+  "ja": "強調する",
+  "kana": "きょうちょうする",
+  "romaji": "kyouchou suru"
+ },
+ {
+  "en": [
+   "investigate"
+  ],
+  "ja": "調査する",
+  "kana": "ちょうさする",
+  "romaji": "chousa suru"
+ },
+ {
+  "en": [
+   "cooperate"
+  ],
+  "ja": "協力する",
+  "kana": "きょうりょくする",
+  "romaji": "kyouryoku suru"
+ },
+ {
+  "en": [
+   "hesitate"
+  ],
+  "ja": "ためらう",
+  "kana": "ためらう",
+  "romaji": "tamerau"
+ },
+ {
+  "en": [
+   "abandon"
+  ],
+  "ja": "捨てる",
+  "kana": "すてる",
+  "romaji": "suteru"
+ },
+ {
+  "en": [
+   "obvious"
+  ],
+  "ja": "明らか",
+  "kana": "あきらか",
+  "romaji": "akiraka"
+ },
+ {
+  "en": [
+   "efficient"
+  ],
+  "ja": "効率的",
+  "kana": "こうりつてき",
+  "romaji": "kouritsuteki"
+ },
+ {
+  "en": [
+   "flexible"
+  ],
+  "ja": "柔軟",
+  "kana": "じゅうなん",
+  "romaji": "juunan"
+ },
+ {
+  "en": [
+   "temporary"
+  ],
+  "ja": "一時的",
+  "kana": "いちじてき",
+  "romaji": "ichijiteki"
+ },
+ {
+  "en": [
+   "abstract"
+  ],
+  "ja": "抽象的",
+  "kana": "ちゅうしょうてき",
+  "romaji": "chuushouteki"
+ }
+]
