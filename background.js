@@ -8,6 +8,7 @@ const DEFAULT_SETTINGS = {
   density: 15, // percent of eligible matches that get replaced
   maxPerPage: 60,
   blocklist: [],
+  showEnglish: false, // show the English word in grey after each replaced word
   // Relative weights (%) for which script a replaced word is shown in.
   scriptWeights: { kanji: 60, kana: 30, romaji: 10 }
 };

@@ -35,6 +35,9 @@ async function init() {
   $("enabled").checked = settings.enabled !== false;
   $("enabled").onchange = (e) => save({ enabled: e.target.checked });
 
+  $("showEnglish").checked = settings.showEnglish === true;
+  $("showEnglish").onchange = (e) => save({ showEnglish: e.target.checked });
+
   const levels = new Set(settings.levels || ["N5"]);
   $("levels").innerHTML = LEVELS.map(
     (l) => `<label><input type="checkbox" value="${l}" ${levels.has(l) ? "checked" : ""}><span>${l}</span></label>`
