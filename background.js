@@ -7,7 +7,12 @@ const DEFAULT_SETTINGS = {
   levels: ["N5"],
   density: 15, // percent of eligible matches that get replaced
   maxPerPage: 60,
-  blocklist: [],
+  // Sites where words are never replaced (subdomains included). Editable in options.
+  blocklist: [
+    "github.com", "gitlab.com", "bitbucket.org", "stackoverflow.com",
+    "docs.google.com", "mail.google.com", "outlook.live.com", "outlook.office.com"
+  ],
+  showEnglish: false, // show the English word in grey after each replaced word
   // Relative weights (%) for which script a replaced word is shown in.
   scriptWeights: { kanji: 60, kana: 30, romaji: 10 }
 };

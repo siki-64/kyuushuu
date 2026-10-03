@@ -7,9 +7,11 @@ A Chrome extension (Manifest V3, no build step) for passive Japanese vocabulary 
 2. Click **Load unpacked** and select this folder.
 
 ## Settings (popup)
-- **On/off** toggle, plus **Disable on this site**.
+- **On/off** toggle, plus **Disable on this site** (adds the site to the blocklist).
+- **Blocked sites** (options page): domains where it never runs; subdomains included, pasted URLs are accepted. Defaults include github.com, gitlab.com, stackoverflow.com, Google Docs and webmail.
 - **JLPT levels**: N5–N1 (default N5).
 - **Words replaced (%)**: share of matching English words that get swapped (1–100%). **Max words per page** caps the total.
+- **Show English next to words**: adds the original English in grey after each swapped word, e.g. 青 [blue]. Off by default; toggles live.
 - **Script mix**: relative weights for showing a word as **kanji**, **kana** or **romaji**. Each replaced word picks a script at random using these weights (default 60 / 30 / 10).
 
 The options page lists every word with its exposure count and lets you toggle **known**, edit the site blocklist and reset progress.

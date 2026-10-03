@@ -35,10 +35,15 @@ async function load() {
 async function init() {
   const { blocklist = [] } = await chrome.storage.sync.get("blocklist");
   $("blocklist").value = blocklist.join("\n");
-  $("blocklist").onchange = (e) => {
-    const list = e.target.value.split(/\s+/).map((s) => s.trim().toLowerCase()).filter(Boolean);
+  // Accept domains or pasted URLs, e.g. "https://www.github.com/foo" -> "github.com".
+  const toDomain = (s) => s.trim().toLowerCase().replace(/^[a-z]+:\/\//, "").replace(/[\/?#:].*$/, "").replace(/^www\./, "");
+  const saveBlocklist = (e) => {
+    const list = [...new Set(e.target.value.split(/[\s,]+/).map(toDomain).filter(Boolean))];
     chrome.storage.sync.set({ blocklist: list });
+    return list;
   };
+  $("blocklist").oninput = saveBlocklist;
+  $("blocklist").onchange = (e) => { e.target.value = saveBlocklist(e).join("\n"); };
 
   for (const l of ["N5", "N4", "N3", "N2", "N1"]) $("level").add(new Option(l, l));
   ["level", "filter"].forEach((id) => ($(id).onchange = render));

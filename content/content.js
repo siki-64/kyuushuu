@@ -307,6 +307,11 @@
     obs.observe(document.body, { childList: true, subtree: true });
   }
 
+  // English gloss after each word, e.g. 青 [blue]; drawn via CSS so it toggles live.
+  function applyShowEnglish(on) {
+    document.documentElement.classList.toggle("jpimm-show-en", !!on);
+  }
+
   async function init() {
     if (!document.body) return;
     const data = await send({ type: "getPageData" });
@@ -315,6 +320,10 @@
     if (!settings.enabled) return;
     if (isBlocked(location.hostname.toLowerCase(), settings.blocklist || [])) return;
     if (/^ja\b/i.test(document.documentElement.lang)) return; // already Japanese
+    applyShowEnglish(settings.showEnglish);
+    chrome.storage.onChanged.addListener((changes, area) => {
+      if (area === "sync" && changes.showEnglish) applyShowEnglish(changes.showEnglish.newValue);
+    });
     lookup = buildLookup(data.words);
     if (!lookup.size) return;
     processRoot(document.body);

@@ -7,6 +7,13 @@
   cursor: help !important;
 }
 
+.jpimm-show-en .jpimm-word::after {
+  content: " [" attr(data-en) "]";
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  font-size: 0.85em !important;
+  color: #8a8a8f !important;
+}
+
 #jpimm-tooltip {
   all: initial;
   position: fixed;

@@ -26,3 +26,6 @@ a { color: var(--accent); }
 .switch span::before { content: ""; position: absolute; width: 16px; height: 16px; left: 2px; top: 2px; background: #fff; border-radius: 50%; transition: .15s; }
 .switch input:checked + span { background: var(--accent); }
 .switch input:checked + span::before { transform: translateX(16px); }
+.toggle { display: flex; align-items: center; gap: 6px; margin-top: 8px; cursor: pointer; }
+.toggle input { accent-color: var(--accent); margin: 0; }
+.toggle .hint { margin: 0; }
