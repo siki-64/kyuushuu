@@ -78,14 +78,16 @@ async function init() {
   if (!host) {
     btn.hidden = true;
   } else {
+    // Match how the content script checks: the site or any parent domain in the list.
+    const blockedBy = () => blocklist.find((d) => host === d || host.endsWith("." + d));
     const update = () => {
-      btn.textContent = blocklist.includes(host) ? `Enable on ${host}` : `Disable on ${host}`;
+      btn.textContent = blockedBy() ? `Enable on ${host}` : `Disable on ${host}`;
     };
     update();
     btn.onclick = () => {
-      const i = blocklist.indexOf(host);
-      if (i >= 0) blocklist.splice(i, 1);
-      else blocklist.push(host);
+      const hit = blockedBy();
+      if (hit) blocklist.splice(blocklist.indexOf(hit), 1);
+      else blocklist.push(host.replace(/^www\./, ""));
       save({ blocklist });
       update();
     };
